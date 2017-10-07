@@ -18,6 +18,9 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
         ImageView logo = (ImageView) findViewById(R.id.logo);
         Button newGame = (Button) findViewById(R.id.new_game);
         Button joinGame = (Button) findViewById(R.id.join_game);
+
+        newGame.setOnClickListener(this);
+        joinGame.setOnClickListener(this);
     }
 
     @Override
