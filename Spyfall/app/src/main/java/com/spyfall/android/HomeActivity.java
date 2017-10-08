@@ -6,6 +6,9 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+import com.firebase.client.Firebase;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.DatabaseReference;
 
 public class HomeActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -21,6 +24,10 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
 
         newGame.setOnClickListener(this);
         joinGame.setOnClickListener(this);
+        Firebase.setAndroidContext(this);
+        FirebaseDatabase database = FirebaseDatabase.getInstance();
+        DatabaseReference myRef = database.getReference("message");
+
     }
 
     @Override

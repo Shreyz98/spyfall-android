@@ -6,7 +6,9 @@ import java.util.Random;
 public class Game {
 
     //TODO: Define static ArrayList<String> for list of locations
-
+    private static final String locations [] = {"Airplane", "Bank", "Beach", "Cathedral", "Circus Tent", "Corporate Party", "Crusader Army", "Casino",
+            "Day Spa", "Embassy", "Hospital", "Hotel", "Military Base", "Movie Studio", "Ocean Liner", "Passenger Train", "Pirate Ship", "Polar Station",
+            "Police Station", "Restraunt", "School", "Service Station", "Submarine", "Supermarket", "Theater", "University", "World War II Squad"};
     private String code;
     private ArrayList<String> players;
     private String spy;
@@ -19,6 +21,7 @@ public class Game {
         this.code = code;
         this.players = new ArrayList<>();
         this.players.add(player);
+
     }
 
     public Game(String code, ArrayList<String> players) {
@@ -27,7 +30,10 @@ public class Game {
         Random random = new Random();
         this.spy = players.get(random.nextInt(players.size()));
         this.firstPlayer = players.get(random.nextInt(players.size()));
+        this.location = locations[random.nextInt(locations.length)];
         //TODO: Get random item from list of locations
+
+
     }
 
     public Game(String code, ArrayList<String> players, String spy, String location,
