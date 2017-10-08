@@ -5,8 +5,6 @@ import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.spyfall.android.model.Player;
-
 import java.util.ArrayList;
 
 public class PlayersAdapter extends RecyclerView.Adapter<PlayersAdapter.CustomViewHolder> {
@@ -21,7 +19,7 @@ public class PlayersAdapter extends RecyclerView.Adapter<PlayersAdapter.CustomVi
 
     @Override
     public CustomViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-
+        return new CustomViewHolder(parent);
     }
 
     @Override
